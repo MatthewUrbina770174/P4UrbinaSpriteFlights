@@ -1,3 +1,4 @@
+using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class Obstacle : MonoBehaviour
@@ -8,9 +9,10 @@ public class Obstacle : MonoBehaviour
     public float minSpeed = 50f;
     public float maxSpeed = 150f;
     Rigidbody2D rb;
+    public GameObject bounceEffectPrefab;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+   void Start()
     {
         float randomSize = Random.Range(minSize, maxsize);
         transform.localScale = new Vector3(randomSize, randomSize, 1);  
@@ -27,4 +29,12 @@ public class Obstacle : MonoBehaviour
     {
         
     }
-}
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Vector2 contactPoint = collision.GetContact(0).point;
+        GameObject bounceEffect = Instantiate(bounceEffectPrefab, contactPoint, Quaternion.identity);
+
+        // Destroy the effect after 1 second
+        Destroy(bounceEffect, 1f);
+    }
+}   

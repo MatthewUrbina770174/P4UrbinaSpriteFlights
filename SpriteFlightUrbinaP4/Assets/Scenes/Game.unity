@@ -285,6 +285,10 @@ PrefabInstance:
       propertyPath: maxSpinSpeed
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: -5409394522371900441, guid: c20edae1e9276724889bdb8fda43a5c1, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 1468283035069827305, guid: 614cf8891bf2a884892fc3a0c3e4901d, type: 3}
     - target: {fileID: 835953719455542688, guid: c20edae1e9276724889bdb8fda43a5c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.63
@@ -500,6 +504,10 @@ PrefabInstance:
       propertyPath: maxSpinSpeed
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: -5409394522371900441, guid: c20edae1e9276724889bdb8fda43a5c1, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 1468283035069827305, guid: 614cf8891bf2a884892fc3a0c3e4901d, type: 3}
     - target: {fileID: 835953719455542688, guid: c20edae1e9276724889bdb8fda43a5c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.56
@@ -769,6 +777,10 @@ PrefabInstance:
       propertyPath: maxSpinSpeed
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: -5409394522371900441, guid: c20edae1e9276724889bdb8fda43a5c1, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 1468283035069827305, guid: 614cf8891bf2a884892fc3a0c3e4901d, type: 3}
     - target: {fileID: 835953719455542688, guid: c20edae1e9276724889bdb8fda43a5c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.59
@@ -1204,6 +1216,10 @@ PrefabInstance:
       propertyPath: maxSpinSpeed
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: -5409394522371900441, guid: c20edae1e9276724889bdb8fda43a5c1, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 1468283035069827305, guid: 614cf8891bf2a884892fc3a0c3e4901d, type: 3}
     - target: {fileID: 835953719455542688, guid: c20edae1e9276724889bdb8fda43a5c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.77
@@ -1261,6 +1277,11 @@ Transform:
 --- !u!4 &1745390119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3804996932436241624, guid: 8ed74b4b7df0e4044b65bff810e89927, type: 3}
+  m_PrefabInstance: {fileID: 7502904928953078204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1745390121 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8531003867045777491, guid: 8ed74b4b7df0e4044b65bff810e89927, type: 3}
   m_PrefabInstance: {fileID: 7502904928953078204}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1845320049 stripped
@@ -1455,6 +1476,10 @@ PrefabInstance:
       propertyPath: maxSpinSpeed
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: -5409394522371900441, guid: c20edae1e9276724889bdb8fda43a5c1, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 1468283035069827305, guid: 614cf8891bf2a884892fc3a0c3e4901d, type: 3}
     - target: {fileID: 835953719455542688, guid: c20edae1e9276724889bdb8fda43a5c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.44
@@ -1518,9 +1543,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2644007397859244058, guid: 8ed74b4b7df0e4044b65bff810e89927, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1745390121}
+    - target: {fileID: 2644007397859244058, guid: 8ed74b4b7df0e4044b65bff810e89927, type: 3}
       propertyPath: uiDocument
       value: 
       objectReference: {fileID: 618220545}
+    - target: {fileID: 2644007397859244058, guid: 8ed74b4b7df0e4044b65bff810e89927, type: 3}
+      propertyPath: explosionEffect
+      value: 
+      objectReference: {fileID: 7089187498560078692, guid: e05a82addcbf52a47bd9b21eee81aefb, type: 3}
     - target: {fileID: 3804996932436241624, guid: 8ed74b4b7df0e4044b65bff810e89927, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1620,6 +1653,10 @@ PrefabInstance:
       propertyPath: maxSpinSpeed
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: -5409394522371900441, guid: c20edae1e9276724889bdb8fda43a5c1, type: 3}
+      propertyPath: bounceEffectPrefab
+      value: 
+      objectReference: {fileID: 1468283035069827305, guid: 614cf8891bf2a884892fc3a0c3e4901d, type: 3}
     - target: {fileID: 835953719455542688, guid: c20edae1e9276724889bdb8fda43a5c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.06
