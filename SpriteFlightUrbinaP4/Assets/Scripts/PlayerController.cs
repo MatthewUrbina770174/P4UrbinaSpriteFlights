@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private Label scoreText;
     private Button restartButton;
     public GameObject explosionEffect;
+    public GameObject borderParent;
 
     void Start()
     {
@@ -64,6 +65,7 @@ public class PlayerController : MonoBehaviour
         Destroy(gameObject);
         Instantiate(explosionEffect, transform.position, transform.rotation);
         restartButton.style.display = DisplayStyle.Flex;
+        borderParent.SetActive(false);
     }
 
     void ReloadScene()
