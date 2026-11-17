@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private float elapsedTime = 0f;
     private float score = 0f;
-    public float scoreMultiplier = 10f;
+    public float scoreMultiplier = 25f;
     public float thrustForce = 1f;
     public float maxSpeed = 5f;
     public GameObject boosterFlame;
@@ -17,7 +17,9 @@ public class PlayerController : MonoBehaviour
     private Button restartButton;
     public GameObject explosionEffect;
     public GameObject borderParent;
-
+    private int highScore = 0;
+    private Label highScoreText;
+   
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,6 +27,12 @@ public class PlayerController : MonoBehaviour
         restartButton = uiDocument.rootVisualElement.Q<Button>("RestartButton");
         restartButton.style.display = DisplayStyle.None;
         restartButton.clicked += ReloadScene;
+
+        highScoreText = uiDocument.rootVisualElement.Q<Label>("HighScoreText");
+        highScore = PlayerPrefs.GetInt("HighScore", 0);
+        highScoreText.text = "High Score:" + highScore;
+        highScoreText.style.display = DisplayStyle.None;
+
     }
 
     void Update()
@@ -34,6 +42,15 @@ public class PlayerController : MonoBehaviour
         score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
         Debug.Log("Score: " + score);
         scoreText.text = "Score: " + score;
+
+        if (score > highScore)
+        {
+            highScore = (int)score;
+            highScoreText.text = "High Score: " + highScore;
+            PlayerPrefs.SetInt("HighScore", highScore);
+        }
+
+
         if (Mouse.current.leftButton.isPressed)
         {
             // Calculate mouse direction
@@ -62,6 +79,9 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        PlayerPrefs.Save();
+        highScoreText.style.display = DisplayStyle.Flex;
+
         Destroy(gameObject);
         Instantiate(explosionEffect, transform.position, transform.rotation);
         restartButton.style.display = DisplayStyle.Flex;
