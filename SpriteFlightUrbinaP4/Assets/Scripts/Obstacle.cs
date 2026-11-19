@@ -1,4 +1,3 @@
-using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class Obstacle : MonoBehaviour
@@ -17,7 +16,7 @@ public class Obstacle : MonoBehaviour
         float randomSize = Random.Range(minSize, maxsize);
         transform.localScale = new Vector3(randomSize, randomSize, 1);  
         rb = GetComponent<Rigidbody2D>();
-        float randomSpeed = Random.Range(minSpeed, maxSpeed) / randomSize; ;
+        float randomSpeed = Random.Range(minSpeed, maxSpeed) / randomSize;
         Vector2 randomDirection = Random.insideUnitCircle;
         rb.AddForce(randomDirection * randomSpeed);
         float randomTorque = Random.Range(-maxSpinSpeed, maxSpinSpeed);
